@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import logging
 import sys
+from webdriver_manager.chrome import ChromeDriverManager
 from random import randint #for random initeger 
 
 from login import *
@@ -17,7 +18,8 @@ options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 
-browser = webdriver.Chrome(executable_path=chromedriver_path, options=options)
+browser = webdriver.Chrome((ChromeDriverManager().install()), options=options)
+
 
 
 browser.implicitly_wait(5)
