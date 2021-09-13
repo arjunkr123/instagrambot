@@ -1,1 +1,1 @@
-worker: python insta-bot.py
+worker: python3 insta-bot.py
