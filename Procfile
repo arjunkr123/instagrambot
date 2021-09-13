@@ -1,0 +1,1 @@
+worker: python insta-bot.py
